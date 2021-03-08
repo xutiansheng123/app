@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/txcolorw"
+    tools:context=".MainActivity">
+<View
+    android:background="@color/theme"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="25dp"/>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/logo"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="青桔到家"
+        android:textColor="@color/txcolorb"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardBackgroundColor="@color/txcolorw"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/login_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btnlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_login"
+                android:text="登陆"
+                android:textColor="@color/txcolorw"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_passwd" />
+
+            <EditText
+                android:id="@+id/edit_passwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/txcolorb"
+                android:textColorHint="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/edit_username" />
+
+            <EditText
+                android:id="@+id/edit_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请输入账号获者手机号"
+                android:padding="10dp"
+                android:textColor="#333333"
+                android:textColorHint="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:visibility="gone"
+                android:id="@+id/avi"
+                android:elevation="10dp"
+                app:indicatorColor="@color/txcolorw"
+                style="@style/AVLoadingIndicatorView"
+                app:layout_constraintBottom_toBottomOf="@id/btnlogin"
+                app:layout_constraintRight_toRightOf="@id/btnlogin"
+                app:layout_constraintTop_toTopOf="@id/btnlogin"
+                app:layout_constraintLeft_toLeftOf="@id/btnlogin"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:indicatorName="BallClipRotatePulseIndicator" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

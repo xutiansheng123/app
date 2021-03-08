@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey">
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn_smallradius"
+        android:text="保存并使用"
+        android:textColor="@color/txcolorw"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/con_fome" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con_fome"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#fff"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/top">
+
+
+        <EditText
+            android:id="@+id/edt_Name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:hint="姓名"
+            android:padding="10dp"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@id/title1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="手机号码"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/txcolorgrey"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/edt_Name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rdo_check" />
+
+        <EditText
+            android:id="@+id/edt_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="例：5号楼203室"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/address"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address" />
+
+        <RadioGroup
+            android:id="@+id/rdo_check"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="@id/edt_Name"
+            app:layout_constraintRight_toRightOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/edt_Name">
+
+            <RadioButton
+                android:id="@+id/rdo_boy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rdoselector"
+                android:button="@null"
+                android:text="先生"
+                android:textColor="@drawable/color" />
+
+            <RadioButton
+                android:id="@+id/rdo_gril"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/rdoselector"
+                android:button="@null"
+                android:text="女士"
+                android:textColor="@drawable/color" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rg_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@id/edt_home"
+            app:layout_constraintRight_toRightOf="@id/edt_home"
+            app:layout_constraintTop_toBottomOf="@id/edt_home">
+
+            <RadioButton
+                android:id="@+id/rdo_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/rdoselector"
+                android:button="@null"
+                android:text=" 家 "
+                android:textColor="@drawable/color" />
+
+            <RadioButton
+                android:id="@+id/rdo_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/rdoselector"
+                android:button="@null"
+                android:text="公司"
+                android:textColor="@drawable/color" />
+
+            <RadioButton
+                android:id="@+id/rdo_school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/rdoselector"
+                android:button="@null"
+                android:text="学校"
+                android:textColor="@drawable/color" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="标签"
+            android:textColor="@color/txcolorb"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/rg_type"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/rg_type" />
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="联系人"
+            android:textColor="@color/txcolorb"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/edt_Name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="电话"
+            android:textColor="@color/txcolorb"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/edt_num"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edt_num" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:drawableRight="@mipmap/right"
+            android:padding="10dp"
+            android:text="选择收货地址"
+            android:textColor="@color/txcolorgrey"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/edt_Name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_num" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="地址"
+            android:textColor="@color/txcolorb"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/address"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/address"
+            app:layout_goneMarginLeft="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="门牌号"
+            android:textColor="@color/txcolorb"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/edt_home"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edt_home" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="@color/bg_grey"
+            app:layout_constraintLeft_toLeftOf="@id/edt_Name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_Name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme"
+        android:paddingTop="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@mipmap/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新增地址"
+            android:textColor="@color/txcolorw"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_back" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

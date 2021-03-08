@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.UserinfoEdtActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con_top"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@mipmap/left_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:textStyle="bold"
+            android:textColor="@color/txcolorb"
+            android:textSize="18sp"
+            android:text="标题"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintTop_toTopOf="@id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginRight="20dp"
+            android:id="@+id/tv_save"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintTop_toTopOf="@id/iv_back"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="保存"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:textSize="14sp"
+        android:gravity="top"
+        android:maxLength="20"
+        android:padding="10dp"
+        android:background="#fff"
+        android:id="@+id/edt_info"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/con_top"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

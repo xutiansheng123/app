@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/whiteradius"
+    android:layout_marginRight="8dp"
+    android:padding="12dp">
+    <TextView
+        android:id="@+id/tv_shopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:drawableRight="@mipmap/right"
+        android:text="小小的牛肉面  "
+        android:textColor="@color/txcolorb"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/shopheadImg"
+        app:layout_constraintTop_toTopOf="@id/shopheadImg" />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已送达"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/allprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="¥22.3"
+        android:textColor="@color/txcolorb"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_state" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="共1件"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_state"
+        app:layout_constraintRight_toRightOf="@id/tv_state"
+        app:layout_constraintTop_toBottomOf="@id/allprice" />
+
+    <TextView
+        android:id="@+id/aginorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/themeradiubtn"
+        android:text="再来一单"
+        android:textColor="@color/theme"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/foodrecycler" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_pj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/greyshape"
+        android:text="评价晒图得12金币"
+        android:textSize="12sp"
+        app:layout_constraintRight_toLeftOf="@id/aginorder"
+        app:layout_constraintTop_toBottomOf="@id/foodrecycler"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/refundproess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/greyshape"
+        android:text="退款进度"
+        android:textSize="12sp"
+        app:layout_constraintRight_toLeftOf="@id/tv_pj"
+        app:layout_constraintTop_toBottomOf="@id/foodrecycler"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintLeft_toLeftOf="@id/tv_shopName"
+        android:id="@+id/foodrecycler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintRight_toLeftOf="@id/allprice"
+        app:layout_constraintTop_toBottomOf="@id/tv_shopName" />
+
+    <com.shehuan.niv.NiceImageView
+
+        android:id="@+id/shopheadImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/tx"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
