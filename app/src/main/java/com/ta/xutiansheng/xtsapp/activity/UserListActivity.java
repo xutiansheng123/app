@@ -100,11 +100,12 @@ public class UserListActivity extends BaseMvpActivity<UserListPresent> implement
         this.list.clear();
         this.list.addAll(list);
         adapter.notifyDataSetChanged();
+        refreshlayout.finishRefresh();
         Log.d("TAG", "onGetListSuccess: "+new Gson().toJson(this.list));
     }
 
     @Override
     public void onGetFauild(String msg) {
-
+        refreshlayout.finishRefresh();
     }
 }

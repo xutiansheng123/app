@@ -71,6 +71,10 @@ public class ShopActivity extends BaseMvpActivity<ShopPresenter> implements Shop
         recyclerMenu.setLayoutManager(new LinearLayoutManager(this));
         recyclerMenu.setAdapter(adaprter);
         btnSubmit.setEnabled(false);
+        Map<String, String> map = new HashMap<>();
+        map.put("shopId", shopId);
+        mPresenter.getShopInfo(map);
+        mPresenter.ongetShopMenuForShopid(shopId);
     }
 
     @Override
@@ -86,7 +90,6 @@ public class ShopActivity extends BaseMvpActivity<ShopPresenter> implements Shop
     @Override
     protected void onResume() {
         super.onResume();
-
         //提交订单功能
         btnSubmit.setOnClickListener(view -> {
             //TODO 提交订单
@@ -144,16 +147,12 @@ public class ShopActivity extends BaseMvpActivity<ShopPresenter> implements Shop
                 list.set(postion, shopMenu);
                 adaprter.notifyItemChanged(postion);
                 reCalulate();
-
             }
         });
         ivBack.setOnClickListener(view -> {
             finish();
         });
-        Map<String, String> map = new HashMap<>();
-        map.put("shopId", shopId);
-        mPresenter.getShopInfo(map);
-        mPresenter.ongetShopMenuForShopid(shopId);
+
     }
 
     @Override
