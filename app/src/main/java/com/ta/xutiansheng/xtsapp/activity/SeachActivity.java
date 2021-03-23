@@ -1,5 +1,6 @@
 package com.ta.xutiansheng.xtsapp.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -72,6 +73,11 @@ public class SeachActivity extends BaseMvpActivity<SeachPresent> implements Seac
         refreshlayout.setOnLoadMoreListener(refreshLayout -> {
             pageNum++;
             initData();
+        });
+        adapter.setOnItemClickListener(position -> {
+            Intent intent =new Intent(SeachActivity.this,ShopActivity.class);
+            intent.putExtra("shopId",list.get(position).getShopid());
+            startActivity(intent);
         });
     }
 

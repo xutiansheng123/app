@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
+import com.squareup.picasso.Picasso;
 import com.ta.xutiansheng.xtsapp.R;
 import com.ta.xutiansheng.xtsapp.adapter.ShopMenuAdaprter;
 import com.ta.xutiansheng.xtsapp.api.interceptor.GlobleSettingData;
@@ -170,6 +171,7 @@ public class ShopActivity extends BaseMvpActivity<ShopPresenter> implements Shop
     @Override
     public void ongetShopInfo(ShopBean bean) {
         this.bean = bean;
+        Picasso.with(ShopActivity.this).load(bean.getHeadimg()).fit().into(ivBg);
     }
 
     private void reCalulate() {
